@@ -1,0 +1,17 @@
+<div #container class="note-card-container" (mouseover) ="cardHover()" (mouseleave) ="hideCloseBtn()">
+    <div class="note-card-content">
+        <h1 class="note-card-title">
+            {{ title }}
+        </h1>
+
+        <!-- (click)="deleteNote(this.noteToDelete?.data?.id)" -->
+        <img src="../../../assets/images/close-me.webp" alt="" class="close-btn" *ngIf = "isVisible" >
+
+        <div #bodyText class="note-card-body">
+            <p>{{ content }}</p>
+            <div #truncator class="fade-out-truncation"></div>    
+        </div>
+
+        <p>{{date}}</p>
+    </div>
+</div>

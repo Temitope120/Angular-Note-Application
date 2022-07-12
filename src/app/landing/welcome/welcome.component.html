@@ -1,0 +1,75 @@
+
+<div class="containerr">
+    <div class="row">
+        <div class="col-lg-4 col-xlg-3 col-md-3 col-xs-2">
+            <!-- <div class="swiper">
+               
+                <div class="swiper-wrapper">
+                 
+                  <div class="swiper-slide">Slide 1
+                    <img src="../../../assets/images/first-illustration.svg" alt="" class="mt-5">
+                  </div>
+                  <div class="swiper-slide">Slide 2
+                    <img src="../../../assets/images/thrid-illustration.svg" alt="" class="mt-5">
+                  </div>
+                  <div class="swiper-slide">Slide 3
+                    <img src="../../../assets/images/illustration-1.svg" alt="" class="mt-5">
+                  </div>
+                  ...
+                </div>
+                
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+               
+                <div class="swiper-scrollbar"></div>
+              </div> -->
+        </div>
+        <!-- <div class="col-lg-1"></div> -->
+        <div class="col-lg-4 col-xlg-6 col-md-6 col-xs-8">
+            <!-- <section class="main"> -->
+            <div class="main-inner shadow-lg pt-5">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <img src="{{ getSlide() }}" alt="slide" class="mt-5 mb-4" >
+                        <h6 class="headd text-center">{{randomText()}}</h6>
+                        <p class="pb-5 label pb-none text-center ms-2 me-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam modi fugiat, iste eligendi distinctio harum omnis mollitia cumque aperiam asperiores </p>
+                    </div>
+
+
+                    <div class="d-flex circles">
+                        <div class="circle me-2" (click)='getPrev()'></div>
+                        <div class="circle-2 me-2" (click)='getNext()'></div>
+                        <div class="circle me-2"></div>
+
+                        <button class="btn btn-md px-3 btn-next shadow-sm ms-5" routerLink = "/auth/">Next</button>
+                    </div>
+
+                  
+                  
+                  
+                  </div>
+
+            
+                
+                
+            </div>
+            <!-- </section> -->
+        </div>
+        <div class="col-lg-4 col-xlg-3 col-md-3 col-xs-2">
+            <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner" role="listbox">
+                    <img src="{{ getSlide() }}" alt="slide" >
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est exercitationem nesciunt illo ipsam debitis natus distinctio dicta doloribus, incidunt error. Repellat maxime quis eum asperiores, perferendis deserunt, voluptas voluptates veniam repellendus, iure deleniti minima doloribus a ipsum fuga est.</p>
+                </div>
+              
+               <button (click)='getPrev()'>Prev</button>
+              
+               <button (click)='getNext()'>Next</button>
+              
+              </div> -->
+        </div>
+    </div>
+
+</div>

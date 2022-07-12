@@ -1,0 +1,26 @@
+<div class="containerr">
+    <div class="top-bar shadow-lg mb-3">
+        <p class="text-center text-dark fw-bold px-3 pt-4-3"> Welcome &nbsp; <span class="name">{{userName}},</span>&nbsp; {{NotesHeading}}</p>
+        <button class="btn btn-sm me-3 text-dark fw-bold btn-white px-3" (click)="logout()"> Log Out</button>
+    </div>
+    
+    <div class="layout">
+        <form class="searchbar-container mt-3 mb-3">
+            <input type="text" placeholder="search Note" class="ps-4">
+            <i class="fa fa-search"></i>
+        </form>
+        <!-- <div>
+            <button class="btn btn-lg"> <i class="fa fa-plus-circle text-white "></i> Add</button>
+        </div> -->
+        <div class="notes-list">
+            <!-- get all notes to display here -->
+            <app-note-card (click)="getNoteById(note?.id)" *ngFor = "let note of allNotes" [title]="note?.title" [content]="note?.content" [date] = "note?.created" > </app-note-card>
+        </div>
+    
+        <button class="btn btn-sm mt-5 text-white fw-bold" routerLink = "/main/new"> + Add</button>
+    
+        <button class="btn btn-primary" (click)="logout()"> Log Out</button>
+    </div>
+</div>
+
+ 

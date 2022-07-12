@@ -1,0 +1,107 @@
+.note-card-container{
+    position: relative;
+    background-color:#fff;
+    border-radius: 15px;
+    padding: 0 5px;
+    box-shadow: 0px 2px 15px 2px rgba(#030f15, 0.068);
+    width: 30vw;
+    margin: 0 auto;
+    transform: translate(-30px 30px);
+    transition: box-shadow 0.2s ease-out;
+    animation-name: boxAnimation;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:inherit;
+    transition: all 4s ease-in;
+
+}
+.note-card-container:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 4px rgba(black, 0.068);
+}
+.note-card-content{
+    border-radius: 15px;
+    background: transparent;
+    padding: 25px 15px;
+    width: 100%;
+    height: auto;
+    /* transform: translateX(10px); */
+    animation-name: cardAnimation;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:inherit;
+    transition: all 4s ease-in;
+}
+
+@keyframes cardAnimation {
+    0%{
+        transform: scale(.85);
+    }
+    30%{
+        transform: scale(.95);
+    }
+    50%{
+        transform: translateX(-2px);
+        /* background-color: rgba(0, 0,0,.5);S */
+    }
+    100%{
+        transform: translateX(0);
+        background: transparent;
+    }
+
+}
+
+
+@keyframes boxAnimation {
+    0%{
+        transform:rotateX(40deg);
+    }
+    30%{
+        transform:rotateY(-40deg);
+    }
+}
+.note-card-title{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff ;
+}
+.note-card-body{
+    color:  #555;
+    position: relative;
+    max-height: 80px;
+    overflow: hidden;
+}
+.fade-out-truncation{
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    pointer-events: none;
+    background-color: linear-gradient(to bottom, rgba(#33B7EC, 0) 0%, rgba(#33B7EC, 0.8) 50%, white 100%);
+}
+.close-btn{
+    width: 25px;
+    height: 25px;
+    opacity: .4;
+    background: none;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    transition: opacity 0.2s ease-out;
+    transition-delay: 0.35s;
+}
+.close-btn:hover{
+    background-color: white;
+    border-radius: 8px;
+}
+.close-btn:active{
+    background-color: rgb(242, 192, 192);
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 430px) {
+    .note-card-container{
+        width: 45vw;
+    }
+    
+}

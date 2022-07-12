@@ -1,0 +1,48 @@
+<div class="containerr">
+    <div class="row">
+        <div class="col-lg-4 col-xlg-3  col-md-3 col-xs-2"></div>
+        <div class="col-lg-4 col-xlg-6 col-md-6 col-xs-8">
+            <!-- <section class="main"> -->
+            <div class="main-inner shadow-lg pt-5">
+                <h6 class="head">Create Account</h6>
+                <form [formGroup]="signUpForm">
+                    <div class="example-container pt-5">
+                        <p class="label"> Email Address</p>
+                            <mat-form-field>
+                                <mat-label><b>john.smith@email.com </b></mat-label>
+                                <input matInput placeholder="" formControlName="email" required autofocus>
+                            </mat-form-field>
+                            
+                            <mat-form-field>
+                                <mat-label><b>First Name</b> </mat-label>
+                                <input matInput placeholder="" formControlName="first_name" required>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <mat-label><b>Last Name</b> </mat-label>
+                                <input matInput placeholder="" formControlName="last_name" required>
+                            </mat-form-field>
+                        <p class="label">Password</p>
+                        <mat-form-field>
+                            <mat-label>************</mat-label>
+                            <input matInput placeholder="" formControlName="password" required
+                                [type]=" passwordType ?  'text' : 'password'" placeholder="Password">
+
+                            <span class="eye-container" (click)="showPassword()">
+                                <i *ngIf="!showText" class="pass-show fa fa-eye-slash"></i>
+                                <i *ngIf="showText" class="pass-show fa fa-eye"></i>
+
+                            </span>
+                        </mat-form-field> <br>
+                        <button type="button" (click) ="createNewUser()" class="btn white-btn-lg fw-bold mt-4">Sign Up</button>
+                        <p class="pt-4"> Already have an account? <a class="red-text" routerLink="/auth/">Login</a></p>
+                    </div>
+                </form>
+            </div>
+            <!-- </section> -->
+        </div>
+        <div class="col-lg-4 col-xlg-3 col-md-3 col-xs-2">
+        </div>
+    </div>
+
+</div>

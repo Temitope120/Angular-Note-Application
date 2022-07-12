@@ -1,0 +1,85 @@
+body{
+    background-color: #e5e5e5;
+}
+.layout{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* width: 30vw; */
+    margin: 0 auto;
+}
+.containerr{
+    background-color:blueviolet;  
+}
+.top-bar{
+    background: linear-gradient(to right, blueviolet, blueviolet, #c570f7, blueviolet, blueviolet);
+    width: 100%;
+    height: 43px;
+    display: flex;
+    flex-shrink: 0;
+    border-bottom-left-radius: 95px;
+    align-items: center;
+}
+.top-bar p{
+    font-size: 22px;
+}
+.name{
+    color: #c570f7;
+}
+.searchbar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    width: 59%;
+}
+::placeholder{
+    color:black;
+    /* padding-left: 5px; */
+    font-weight: 400;
+}
+.searchbar-container input{
+    width: 100%;
+    height: 28px;
+    background-color: #fff;
+    border: transparent;
+    border-radius: 13px;
+    outline: none;
+
+}
+.searchbar-container i{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    color: rgb(96, 92, 92);
+}
+app-note-card{
+    display: block;
+    margin-bottom: 25px;
+}
+.notes-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 85vw;
+    margin: 30px auto;
+}
+@media screen and (max-width: 1024px) {
+    .notes-list{
+        width: 90vw;
+        justify-content: space-evenly;
+    }
+    
+}
+
+@media screen and (max-width: 430px) {
+    .notes-list{
+        width: 100vw;
+        justify-content: space-evenly;
+    }
+    
+}

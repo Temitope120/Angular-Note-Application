@@ -1,0 +1,21 @@
+<div class="top-bar shadow-lg mb-3">
+    <p class="text-center text-white fw-bold p-3">Notes</p>
+    <button class="btn btn-sm me-3 btn-primary" (click)="logout()"> Log Out</button>
+</div>
+
+<div class="form-container">
+    <form [formGroup] ="addNoteForm" (ngSubmit)="SaveNote()">
+        <mat-form-field class="field">
+            <mat-label for="">Title</mat-label>
+            <input matInput type="text" placeholder="Title" required autofocus formControlName="title"> <br>
+        </mat-form-field> <br>
+
+        <label for="">Body</label> <br> <br>
+        <textarea name="bodyText" id="content" cols="50" rows="15" formControlName ="content"></textarea> <br> <br>
+        
+        <div class="d-flex justify-content-center align-items-center">
+            <a>Cancel</a>
+            <button type="submit" class="btn ms-5">Save</button>
+        </div>
+    </form>
+</div>
