@@ -14,9 +14,7 @@ export class NoteDetailsComponent implements OnInit {
   loading:boolean = false;
   newNote: any;
   notes:Note[]= new Array<Note>();
-  // errorMessage:string | null = null
-  // note_id:number | null = null;
-  // noteDetails: any;
+  NotesHeading: string = "Add New Note"
  
 
   constructor(private fb:FormBuilder, private router: Router, private noteData:NoteService, private activatedRoute: ActivatedRoute) { }
@@ -66,12 +64,9 @@ export class NoteDetailsComponent implements OnInit {
       if(noteValues !== null){
         console.log(this.newNote.data)
         let newLength = this.notes.push(noteValues);
+        this.router.navigateByUrl('/main/dashboard');
         console.log("New Length:", newLength);
         console.log(this.notes);
-        if(this.notes !== null){
-          this.router.navigateByUrl('/main/dashboard');
-        }
-        /// console.log(this.newNote);
         return newLength;
       }else{
         this.router.navigateByUrl('/main/dashboard');

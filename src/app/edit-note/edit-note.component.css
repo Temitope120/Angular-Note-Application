@@ -1,3 +1,23 @@
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #B861F2; 
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b76ce9; 
+  }
 .top-bar{
     background-color: #e5e5e5;
     width: 100%;

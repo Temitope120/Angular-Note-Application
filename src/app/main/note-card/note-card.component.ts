@@ -34,32 +34,6 @@ export class NoteCardComponent implements OnInit {
     this.isVisible = false;
   }
 
-  // deleteNote(note_id: number) {
-  //   // if (note_id) {
-  //   //   this.noteData.delete(note_id).subscribe((data) => {
-  //   //     this.getNotes()
-  //   //   }, (error) => {
-  //   //     this.errorMessage = error
-  //   //   })
-  //   // }
-
-  //   const noteValues = {
-  //     title: this.title,
-  //     content: this.content
-  //   }
-
-  //   this.noteData.delete(note_id).subscribe((res) => {
-  //     this.noteToDelete = res;
-  //     if(note_id){
-  //       console.log("Delete this note", res)
-  //       noteValues.title = "",
-  //       noteValues.content = ""
-  //     }
-
-  //   })
-  // }
-
-
   getNotes() {
     this.noteData.getAll().subscribe((res) => {
       this.allNotes = res.data;

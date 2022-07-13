@@ -31,7 +31,21 @@ nav{
     font-size: 22px;
 }
 .name{
-    color: #c570f7;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-style: dotted;
+}
+.namme{
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+.add-btn{
+    background-color: #c570f7 !important;
+    border: transparent;
+    border-radius: 50%;
 }
 .nav-row{
     --bs-gutter-x: 0px !important;

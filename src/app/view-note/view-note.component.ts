@@ -15,6 +15,9 @@ export class ViewNoteComponent implements OnInit {
   particularNote: any;
   viewNote!: FormGroup;
   NotesHeading: string = "View Note";
+  userFirstName:any;
+  userLastName:any;
+  disabled:boolean = true;
 
   constructor(private noteData:NoteService, private route:ActivatedRoute, private fb: FormBuilder, private router:Router) { }
 
@@ -22,7 +25,6 @@ export class ViewNoteComponent implements OnInit {
     this.noteId = this.route.snapshot.params['id'];
     this.initViewNote();
     this.viewNoteById(this.noteId);
-    // this.getNoteById(this.noteId)
   }
 
   initViewNote(){
@@ -32,14 +34,13 @@ export class ViewNoteComponent implements OnInit {
     })
   }
 
-  // since you can already view the note her, just call the Edit or update endpoint here so you can edit a note as you view it.
-
   // for view
 
   viewNoteById(noteId: number) {
     this.noteData.getNote(noteId).subscribe((res) =>{
-      // this.router.navigateByUrl(`/main/edit/${noteId}`
       console.log("The whole response for a note I view", res);
+      this.userFirstName = res.data.user.first_name;
+      this.userLastName = res.data.user.last_name;
       if(res.data === null){
         this.initViewNote();
       }
@@ -47,7 +48,6 @@ export class ViewNoteComponent implements OnInit {
         this.particularNote = res.data;
         console.log('particular note',this.particularNote);
         this.populateNote()
-        // return this.notes[noteId];
       }
      
     })

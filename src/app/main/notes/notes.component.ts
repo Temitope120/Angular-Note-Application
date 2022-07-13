@@ -13,7 +13,8 @@ export class NotesComponent implements OnInit {
   errorMessage:any;
   note_id!: string | undefined;
   noteId!: number;
-  userName: any;
+  userFirstName: any;
+  userLastName:any;
   NotesHeading: string = "Add a New Note Today!"
 
   constructor(private noteData: NoteService, private router: Router, private route:ActivatedRoute) { }
@@ -32,7 +33,8 @@ export class NotesComponent implements OnInit {
       this.allNotes = res.data;
       console.log('All my notes', this.allNotes);
       console.log("The User's Name", this.allNotes[0].user.first_name)
-      this.userName = this.allNotes[0].user.first_name;
+      this.userFirstName = this.allNotes[0].user.first_name;
+      this.userLastName = this.allNotes[0].user.last_name;
       // return this.notes[]
     })
 

@@ -16,7 +16,8 @@ export class EditNoteComponent implements OnInit {
   note_id!: number;
   noteToEdit:any;
   NotesHeading: string = "Edit Note";
-  userName: any;
+  userFirstName: any;
+  userLastName: any;
 
   constructor(private noteData:NoteService, private fb: FormBuilder, private route:ActivatedRoute, private router:Router) { }
 
@@ -43,7 +44,8 @@ export class EditNoteComponent implements OnInit {
     this.noteData.getNote(noteId).subscribe((res) =>{
       console.log("The whole response for a note I want to Edit", res);
       console.log("The status for a note I want to Edit", res.status);
-      this.userName = res.data.user.first_name;
+      this.userFirstName = res.data.user.first_name;
+      this.userLastName = res.data.user.last_name;
       if(res.data === null){
         this.initEditNoteForm();
       }

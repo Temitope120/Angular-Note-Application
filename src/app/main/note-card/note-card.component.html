@@ -1,7 +1,7 @@
 <div #container class="note-card-container" (mouseover) ="cardHover()" (mouseleave) ="hideCloseBtn()">
     <div class="note-card-content">
         <h1 class="note-card-title">
-            {{ title }}
+            {{title}}
         </h1>
 
         <!-- (click)="deleteNote(this.noteToDelete?.data?.id)" -->
@@ -12,6 +12,6 @@
             <div #truncator class="fade-out-truncation"></div>    
         </div>
 
-        <p>{{date}}</p>
+        <p class="date">{{date}}</p>
     </div>
 </div>

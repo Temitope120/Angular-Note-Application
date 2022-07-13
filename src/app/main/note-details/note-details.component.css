@@ -1,11 +1,26 @@
 .top-bar{
-    background: linear-gradient(to right, #f621e8, #dd55f2, #c570f7, #b183f5, #a391ee, #9699ee, #8ca0eb, #86a6e7, #73abeb, #5cb1ed, #40b5ed, #12baeb);
+    background: linear-gradient(to right, blueviolet, blueviolet, #c570f7, blueviolet, blueviolet);
     width: 100%;
-    height: 40px;
+    height: 43px;
     display: flex;
     flex-shrink: 0;
-    justify-content: center;
+    border-bottom-left-radius: 95px;
     align-items: center;
+}
+.containerr{
+    background-color:blueviolet; 
+    height: 100vh; 
+}
+.title{
+    color: #fff;
+}
+.edit{
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 8px;
+}
+.cancel{
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 8px;
 }
 .top-bar p{
     font-size: 22px;

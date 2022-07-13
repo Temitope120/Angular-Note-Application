@@ -25,9 +25,6 @@ body{
 .top-bar p{
     font-size: 22px;
 }
-.name{
-    color: #c570f7;
-}
 .searchbar-container{
     display: flex;
     justify-content: center;
