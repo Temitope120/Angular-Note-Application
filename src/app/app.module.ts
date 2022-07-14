@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { TokenInterceptor } from './interceptor/token';
 import { ViewNoteComponent } from './view-note/view-note.component';
 import { EditNoteComponent } from './edit-note/edit-note.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -31,6 +32,7 @@ import { EditNoteComponent } from './edit-note/edit-note.component';
     BrowserAnimationsModule,
     MatFormFieldModule,
     ReactiveFormsModule,
+    NgxPaginationModule,
     // DatePipe
   ],
   providers: [   {

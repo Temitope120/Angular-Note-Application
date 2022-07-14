@@ -4,8 +4,11 @@
             <span class="name">{{userFirstName}}&nbsp;{{userLastName}}
             </span>
         </p>
-        <p class="text-center text-dark fw-bold p-3">{{NotesHeading}}</p>
+        <p class="text-center text-dark fw-bold p-3 px-sm-0">{{NotesHeading}}</p>
 
+        <!-- <button *ngIf = "showBtn" (click) ="drop()">Click</button> -->
+
+        <!-- *ngIf="isvisible" -->
         <div>
             <button class="btn btn-sm add-btn me-3 text-white fw-bold" routerLink = "/main/new"> +</button>
             <button class="btn btn-sm me-3 text-dark fw-bold btn-white px-3" (click)="logout()"> Log Out</button>
@@ -13,7 +16,7 @@
     </div>
 
 
-    <div class="form-container">
+    <div class="form-container shadow-lg mt-3">
         <!-- <h1>Edit Note</h1> -->
         <form [formGroup]="editNote" (ngSubmit)="submitEditedNote()">
             <!-- <mat-form-field class="field"> -->

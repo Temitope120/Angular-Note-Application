@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { NoteCardComponent } from './note-card/note-card.component';
 import { NoteDetailsComponent } from './note-details/note-details.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NoteDetailsComponent } from './note-details/note-details.component';
      ReactiveFormsModule,
      MatFormFieldModule,
      MatInputModule,
+     NgxPaginationModule,
     //  DatePipe,
   ]
 })

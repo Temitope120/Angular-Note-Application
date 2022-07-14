@@ -1,6 +1,6 @@
 .note-card-container{
     position: relative;
-    background-color:#fff;
+    background-color:blueviolet;
     border-radius: 15px;
     padding: 0 5px;
     box-shadow: 0px 2px 15px 2px rgba(#030f15, 0.068);
@@ -9,11 +9,13 @@
     height: 200px;
     transform:rotateY(-30deg);
     transition: box-shadow 0.2s ease-out;
-    animation-name: boxAnimation;
-    animation-duration: 4s;
+    /* animation-name: boxAnimation; */
+    box-sizing: border-box;
+    overflow: hidden;
+    /* animation-duration: 4s;
     animation-timing-function: ease-in-out;
     animation-iteration-count:inherit;
-    transition: all 4s ease-in;
+    transition: all 4s ease-in; */
 
 }
 .note-card-container:hover{
@@ -34,8 +36,8 @@
     transition: all 4s ease-in;
 }
 
-@keyframes cardAnimation {
-    0%{
+/* @keyframes cardAnimation { */
+    /* 0%{
         transform: scale(.85);
     }
     30%{
@@ -43,32 +45,33 @@
     }
     50%{
         transform: translateX(-2px);
-        /* background-color: rgba(0, 0,0,.5);S */
+
     }
     100%{
         transform: translateX(0);
         background: transparent;
-    }
+    } */
 
-}
+/* } */
 
 
-@keyframes boxAnimation {
+/* @keyframes boxAnimation {
     0%{
         transform:rotateX(40deg);
     }
     30%{
         transform:rotateY(-40deg);
     }
-}
+} */
 .note-card-title{
     font-size: 18px;
-    font-weight: bold;
-    color: blueviolet ;
+    font-weight: 500;
+    color: #000 ;
     
 }
 .note-card-body{
-    color:  #555;
+    color:  #fff;
+    font-weight: 500;
     position: relative;
     max-height: 60px;
     overflow: hidden;
@@ -94,7 +97,7 @@
     transition-delay: 0.35s;
 }
 .close-btn:hover{
-    background-color: #8A2BE2;
+    background-color: #fff;
     border-radius: 8px;
 }
 .close-btn:active{
@@ -102,8 +105,13 @@
     border-radius: 8px;
 }
 .date{
+    color: rgb(45, 44, 44);
+    font-weight: 500;
     text-align: right;
     font-style: italic;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
 @media screen and (max-width: 430px) {
@@ -133,6 +141,20 @@
     }
     .date{
         font-size: 12px;
+    }
+    
+}
+@media screen and (max-width: 430px) {
+    .note-card-container{
+        width: 50vw;
+        height: 210px;
+    }
+    .note-card-title{
+        font-size: 10px;
+        line-height: 14px;
+    }
+    .date{
+        font-size: 10px;
     }
     
 }

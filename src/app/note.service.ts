@@ -13,9 +13,9 @@ export class NoteService {
 
   constructor(private http:HttpClient) { }
 
-  getAll(){
+  getAll(page: number, perpage: number){
     // return this.notes;
-    let dataURL:string = `${environment.serverUrl}/note/`;
+    let dataURL:string = `${environment.serverUrl}/note?page=${page}&per_page=${perpage}`;
     return this.http.get<any>(dataURL).pipe(catchError(this.handleError))
   }
   
@@ -42,7 +42,6 @@ export class NoteService {
   update(note_id:number, payload:any): Observable<any>{
     // this update function should take payload as a parameter since where I'm using it I've created a payload there as the Editnote form values
     let dataURL:string = `${environment.serverUrl}/note/${note_id}`;
-    // be sure of this endpoint for update and know what to pass in for put method: DONE
     return this.http.put<any>(dataURL, payload).pipe(catchError(this.handleError));
   }
 

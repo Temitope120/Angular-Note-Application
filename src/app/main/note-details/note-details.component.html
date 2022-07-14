@@ -8,19 +8,19 @@
         </div>
     </div>
     
-    <div class="form-container">
+    <div class="form-container mt-4 shadow-lg">
         <form [formGroup]="addNoteForm">
             <mat-form-field class="field">
                 <label for="">Title</label>
-                <input matInput type="text" placeholder="Title" required autofocus formControlName="title" class="title"> <br>
+                <input matInput type="text" placeholder="Title" required autofocus formControlName="title" class="title px-2 pt-2"> <br>
             </mat-form-field> <br>
     
             <label for="">Body</label> <br> <br>
             <textarea name="bodyText" id="content" cols="50" rows="15" formControlName="content"></textarea> <br> <br>
     
             <div class="d-flex justify-content-center align-items-center">
-                <button routerLink="/main/dashboard"  class="btn cancel text-dark shadow-lg fw-bold mb-4 px-3 btn-white">Cancel</button >
-                <button type="submit" class="btn ms-5 text-dark shadow-lg fw-bold mb-4 px-3 btn-white edit"  (click)="SaveNote()">Save</button>
+                <button routerLink="/main/dashboard"  class="btn cancel text-dark shadow-sm fw-bold mb-4 px-3 btn-white">Cancel</button >
+                <button type="submit" class="btn ms-5 text-dark shadow-sm fw-bold mb-4 px-3 btn-white edit"  (click)="SaveNote()">Save</button>
             </div>
         </form>
     </div>

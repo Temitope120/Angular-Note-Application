@@ -7,11 +7,7 @@ body{
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-    /* width: 30vw; */
     margin: 0 auto;
-}
-.containerr{
-    background-color:blueviolet;  
 }
 .top-bar{
     background: linear-gradient(to right, blueviolet, blueviolet, #c570f7, blueviolet, blueviolet);
@@ -26,7 +22,9 @@ body{
     font-size: 22px;
 }
 .searchbar-container{
+    background-color: #fff;
     display: flex;
+    border-radius: 13px;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -77,6 +75,12 @@ app-note-card{
     .notes-list{
         width: 100vw;
         justify-content: space-evenly;
+    }
+    .searchbar-container{
+        width: 90vw;
+    }
+    .top-bar p {
+        font-size: 13px;
     }
     
 }

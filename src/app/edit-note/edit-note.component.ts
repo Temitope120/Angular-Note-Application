@@ -18,6 +18,8 @@ export class EditNoteComponent implements OnInit {
   NotesHeading: string = "Edit Note";
   userFirstName: any;
   userLastName: any;
+  // isvisible: boolean = true;
+  // showBtn:boolean = true;
 
   constructor(private noteData:NoteService, private fb: FormBuilder, private route:ActivatedRoute, private router:Router) { }
 
@@ -28,6 +30,10 @@ export class EditNoteComponent implements OnInit {
     
   }
 
+  // drop(){
+  //   this. isvisible = true;
+
+  // }
   initEditNoteForm(){
     this.editNote = this.fb.group({
       title: ['', Validators.required],

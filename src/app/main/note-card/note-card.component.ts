@@ -1,4 +1,5 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { NoteService } from 'src/app/note.service';
 
 @Component({
@@ -11,18 +12,23 @@ export class NoteCardComponent implements OnInit {
   @Input() title!: string;
   @Input() content!: string;
   @Input() date!: number;
+  @Input() id!: any;
+  @Output() sendId = new EventEmitter();
+  amount = '600';
   notes: any;
   allNotes: any;
   errorMessage: any;
   // note_id: string | undefined;
   noteToDelete:any;
+  note_id!:number;
 
 
-  constructor(private noteData: NoteService) { }
+  constructor(private noteData: NoteService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.isVisible = false;
-    this.getNotes();
+    // this.getNotes();
+    // this.deleteNote(this.note_id);
     // this.note_id = this.route.snapshot.params['id'];
   }
 
@@ -34,11 +40,18 @@ export class NoteCardComponent implements OnInit {
     this.isVisible = false;
   }
 
-  getNotes() {
-    this.noteData.getAll().subscribe((res) => {
-      this.allNotes = res.data;
-      console.log('All my notes', this.allNotes)
-      // return this.notes[]
-    })
+  // getNotes() {
+  //   this.noteData.getAll().subscribe((res) => {
+  //     this.allNotes = res.data;
+  //     console.log('All my notes', this.allNotes)
+  //     // return this.notes[]
+  //   })
+  // }
+
+
+    deleteNote(note_id:number, type: string) {
+     this.sendId.emit({note_id, actionType: type})
   }
+
+  
 }

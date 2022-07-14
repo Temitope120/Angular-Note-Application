@@ -13,10 +13,10 @@
     </div>
 
 
-    <div class="form-container">
+    <div class="form-container shadow-lg mt-3">
         <form [formGroup]="viewNote">
             <label class="fw-bold text-dark heading-text">Title</label> <br>
-            <input type="text" required autofocus formControlName="title" readonly class="title-bar p-1 mt-2"> <br>
+            <input type="text" required autofocus formControlName="title" readonly class="title-bar p-1 mt-2 shadow-sm"> <br>
             <br>
 
             <label for="" class="fw-bold text-dark heading-text">Body</label> <br> <br>
@@ -25,7 +25,7 @@
             </textarea> <br> <br>
 
             <div class="d-flex justify-content-center align-items-center">
-                <button type="submit" class="btn ms-5 text-dark shadow-lg fw-bold mb-4 px-3 btn-white edit"
+                <button type="submit" class="btn ms-5 text-dark shadow-sm fw-bold mb-4 px-3 btn-white edit"
                     (click)="getNoteById(this.particularNote?.id)">Edit</button>
             </div>
         </form>

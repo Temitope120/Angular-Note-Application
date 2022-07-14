@@ -36,11 +36,13 @@ nav{
     padding: 5px 10px;
     border: 1px solid white;
     border-style: dotted;
+    border-bottom-left-radius: 20px;
 }
 .namme{
     color: #fff;
     font-size: 15px;
     padding: 5px 10px;
+    border-bottom-left-radius: 20px;
 }
 .add-btn{
     background-color: #c570f7 !important;
@@ -76,7 +78,17 @@ li{
     border-top-right-radius: 10px;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 3px;
-    background-color: #fcebeb;
+    background-color: #fff;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 18px 25px;
+    height: 100vh;
+    color: #000;   
 }
 .green-btn{
     background: #06A77D;
@@ -141,6 +153,9 @@ li{
 }
 .mat-form-field-infix {
     width: 350px !important;
+}
+.ngx-pagination .current{
+    background-color: blueviolet !important;
 }
 
 @media screen and (max-width: 1024px){

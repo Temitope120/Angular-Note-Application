@@ -1,17 +1,18 @@
-<div #container class="note-card-container" (mouseover) ="cardHover()" (mouseleave) ="hideCloseBtn()">
-    <div class="note-card-content">
+<div #container class="note-card-container"  (mouseover) ="cardHover()" (mouseleave) ="hideCloseBtn()">
+    <div class="note-card-content" >
         <h1 class="note-card-title">
             {{title}}
         </h1>
 
         <!-- (click)="deleteNote(this.noteToDelete?.data?.id)" -->
-        <img src="../../../assets/images/close-me.webp" alt="" class="close-btn" *ngIf = "isVisible" >
+        <!-- *ngIf = "isVisible"  -->
+        <img src="../../../assets/images/close-me.webp" alt="" class="close-btn" (click) ="deleteNote(id, 'delete')">
 
-        <div #bodyText class="note-card-body">
+        <div #bodyText class="note-card-body" (click) ="deleteNote(id, 'click')">
             <p>{{ content }}</p>
             <div #truncator class="fade-out-truncation"></div>    
         </div>
 
-        <p class="date">{{date}}</p>
+        <p class="date">{{date | date: 'mediumDate'}} {{amount | currency:"NGN"}}</p>
     </div>
 </div>
