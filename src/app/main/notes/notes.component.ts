@@ -17,7 +17,7 @@ export class NotesComponent implements OnInit {
   noteId!: number;
   userFirstName: any;
   userLastName: any;
-  NotesHeading: string = "Add a New Note Today!";
+  NotesHeading: string = "View Your Notes";
   noteSize: number = 10;
   page: number = 1;
   count: number = 0;

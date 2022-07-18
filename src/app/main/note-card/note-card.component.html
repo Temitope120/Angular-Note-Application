@@ -1,4 +1,4 @@
-<div #container class="note-card-container"  (mouseover) ="cardHover()" (mouseleave) ="hideCloseBtn()">
+<div #container class="note-card-container shadow-lg"  (mouseover) ="cardHover()" (mouseleave) ="hideCloseBtn()">
     <div class="note-card-content" >
         <h1 class="note-card-title">
             {{title}}
@@ -13,6 +13,6 @@
             <div #truncator class="fade-out-truncation"></div>    
         </div>
 
-        <p class="date">{{date | date: 'mediumDate'}} {{amount | currency:"NGN"}}</p>
+        <p class="date">{{date | date: 'mediumDate'}}</p>
     </div>
 </div>

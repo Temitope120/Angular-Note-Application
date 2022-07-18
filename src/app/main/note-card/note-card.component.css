@@ -1,10 +1,10 @@
 .note-card-container{
     position: relative;
-    background-color:blueviolet;
+    background-color:#fff;
     border-radius: 15px;
     padding: 0 5px;
     box-shadow: 0px 2px 15px 2px rgba(#030f15, 0.068);
-    width: 20vw;
+    width: 27vw;
     margin: 0 auto;
     height: 200px;
     transform:rotateY(-30deg);
@@ -70,7 +70,7 @@
     
 }
 .note-card-body{
-    color:  #fff;
+    color:  #000;
     font-weight: 500;
     position: relative;
     max-height: 60px;
@@ -113,6 +113,9 @@
     bottom: 10px;
     right: 10px;
 }
+.mobile-menu{
+    display: none;
+}
 
 @media screen and (max-width: 430px) {
     .note-card-container{
@@ -123,7 +126,7 @@
 @media screen and (max-width: 1210px) {
     .note-card-container{
         height: 230px;
-        width: 25vw;
+        width: 30vw;
     }
     .note-card-title{
         font-size: 12px;
@@ -146,15 +149,30 @@
 }
 @media screen and (max-width: 430px) {
     .note-card-container{
-        width: 50vw;
+        width: 100vw;
         height: 210px;
     }
     .note-card-title{
-        font-size: 10px;
+        font-size: 15px;
         line-height: 14px;
     }
     .date{
         font-size: 10px;
     }
     
+}
+
+@media screen and (max-width: 320px) {
+    
+    .note-card-container{
+        width: 100vw;
+        height: 210px;
+    }
+    pagination-controls{
+        width: 100vw;
+    }
+    .menu{
+        position: absolute;
+        bottom: 0;
+    }
 }

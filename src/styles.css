@@ -48,7 +48,8 @@ nav{
     justify-content: space-between;
 }
 .top-bar p{
-    font-size: 22px;
+    font-size: 20px;
+    color: #e5e5e5;
 }
 .name{
     color: #fff;

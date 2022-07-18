@@ -2,7 +2,6 @@
     <div class="row">
         <div class="col-lg-4 col-xlg-3  col-md-3 col-xs-2"></div>
         <div class="col-lg-4 col-xlg-6 col-md-6 col-xs-8">
-            <!-- <section class="main"> -->
             <div class="main-inner shadow-lg pt-5">
                 <h6 class="head">Login to continue</h6>
                 <p class="pb-5 label pb-none">Enter Login details Below</p>
@@ -14,8 +13,6 @@
                                 <mat-label><b>john.smith@email.com </b></mat-label>
                                 <input matInput placeholder="" formControlName="email" required autofocus>
                             </mat-form-field>
-                        
-
                         <p class="label">Password</p>
                         <mat-form-field>
                             <mat-label>************</mat-label>
@@ -28,29 +25,11 @@
                             </span>
                         </mat-form-field> <br>
 
-                        <a routerLink="forgot-password" class="forgot-password pt-2"> Forgot Password?</a>
-
-                        <button type="button" (click) ="submitLogin()" class="btn white-btn-lg fw-bold mt-4">Login to your
-                            account</button>
+                        <button type="button" (click) ="submitLogin()" class="btn white-btn-lg fw-bold mt-4">Login to your account</button>
                         <p class="pt-4"> You don't have an account? <a class="red-text" routerLink="/auth/signUp">Sign up</a></p>
                     </div>
-                </form>
-
-
-                <!-- [ngClass] = "loopedItem ? 'display', : 'hide' " -->
-                <!-- [ngClass] ="this.commonQuestions.indexOf(loopedItem)) === 0 ? 'display', : 'hide' " -->
-
-                <!-- *ngFor = 'let val of commonQuestions index as i' -->
-                <!-- [ngStyle]="{ display: display }" -->
-                <!-- <form style="width: 100%; background-color: rosybrown; border: 4px solid black;">
-                    <form style="background-color: blue; color: red;">
-                        <input class="Movingsearch" type="text" placeholder="" [value]="commonQuestions"   />
-                    </form>
-                </form> -->
-                
-                
+                </form>                
             </div>
-            <!-- </section> -->
         </div>
         <div class="col-lg-4 col-xlg-3 col-md-3 col-xs-2">
         </div>

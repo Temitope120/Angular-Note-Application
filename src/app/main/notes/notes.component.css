@@ -19,7 +19,8 @@ body{
     align-items: center;
 }
 .top-bar p{
-    font-size: 22px;
+    font-size: 20px;
+    color: #e5e5e5;
 }
 .searchbar-container{
     background-color: #fff;
@@ -68,6 +69,9 @@ app-note-card{
 .showSideMenu{
     display: block;
 }
+.mobile-menu{
+    display: none;
+}
 
 
 @media screen and (max-width: 1024px) {
@@ -90,6 +94,13 @@ app-note-card{
 }
 
 @media screen and (max-width: 430px) {
+    .menu{
+        display: none;
+    }
+    .mobile-menu{
+        display: flex;
+        justify-content: center;
+    }
     .notes-list{
         width: 100vw;
         justify-content: space-evenly;
@@ -103,36 +114,7 @@ app-note-card{
     .top-bar{
         justify-content: space-evenly;
     }
-    .top-bar p {
-        font-size: 13px;
-    }
-    .showCloseBtn{
-        display: block;
-    }
-    .showSideMenu{
-        display: block;
-        position: absolute;
-        right:0px;
-        top: 35px;
-        background-color: #fff;
-        padding: 5px;
-        border-radius: 10px;
-        box-shadow: 0 .125rem .25rem rgba(black, .075);
-    } 
-    .showCloseBtnDiv{
-        display: block;
-    }
-    .close-btn{
-        visibility: visible;
-        position: absolute;
-        width: 15px;
-        height: 20px;
-        bottom: 5px;
-        top: 5px;
-    }
     .name, .top-bar p{
         font-size: 10px;
-    }
-    
+    } 
 }
-

@@ -4,7 +4,7 @@
             <span class="name">{{userFirstName}}&nbsp;{{userLastName}}
             </span>
         </p>
-        <p class="text-center text-dark fw-bold p-3">{{NotesHeading}}</p>
+        <p class="text-center fw-bold p-3">{{NotesHeading}}</p>
 
         <div *ngIf="showCloseBtnDiv" [ngClass] = "{showCloseBtn: showCloseBtn}">
             <img src="../../../assets/images/close-me.webp" alt="" class="close-btn" [ngClass]="{showCloseBtnDiv: showCloseBtnDiv}" (click) = "dropdown()" >
