@@ -1,24 +1,25 @@
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #fff; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #B861F2; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #B861F2;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #b76ce9; 
-  }
-.top-bar{
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b76ce9;
+}
+
+.top-bar {
     background-color: #e5e5e5;
     width: 100%;
     height: 40px;
@@ -27,45 +28,127 @@
     /* justify-content: center; */
     align-items: center;
 }
-.top-bar p{
+
+.top-bar p {
     font-size: 22px;
 }
-.containerr{
-    background-color:#fff;  
+
+.containerr {
+    background-color: #fff;
     height: 100vh;
 }
-.update{
+
+.update {
     border-bottom-left-radius: 30px;
     border-top-left-radius: 8px;
 }
-#contentt{
+
+#contentt {
     width: 100%;
     padding: 18px 12px;
 }
-.heading-text{
+
+.heading-text {
     font-size: 1rem;
 }
-#contentt{
+
+#contentt {
     border: transparent;
     outline: none;
     border-radius: 10px;
 }
-input.ng-invalid,textarea.ng-invalid{
+
+input.ng-invalid,
+textarea.ng-invalid {
     border-color: red;
     box-shadow: 0px 0px 0px 2px rgba(red, 0.1);
 }
 
-@media screen and (max-width: 430px) {
-    .top-bar p {
-        font-size: 18px;
+
+.close-btn {
+    visibility: hidden;
+}
+
+.showSideMenu {
+    display: block;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .form-container {
+        width: 60vw;
     }
-    .form-container{
-        width: 90vw;
+
+    .showSideMenu {
+        display: block;
     }
 }
+
+@media screen and (max-width:768px) {
+    .form-container {
+        width: 80vw;
+    }
+
+    .showSideMenu {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .top-bar {
+        justify-content: space-evenly;
+    }
+
+    .top-bar p {
+        font-size: 13px;
+    }
+
+    .form-container {
+        width: 90vw;
+    }
+
+    .name {
+        font-size: 13px;
+    }
+
+    .showCloseBtn {
+        display: block;
+    }
+
+    .showSideMenu {
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 35px;
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 0 .125rem .25rem rgba(black, .075);
+    }
+
+    .showCloseBtnDiv {
+        display: block;
+    }
+
+    .close-btn {
+        visibility: visible;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        bottom: 5px;
+        top: 5px;
+    }
+}
+
 @media screen and (max-width:380px) {
-    .p-none{
+    .p-none {
         padding-left: 0 !important;
         padding-right: 0 !important;
+    }
+
+    .name {
+        font-size: 10px;
     }
 }

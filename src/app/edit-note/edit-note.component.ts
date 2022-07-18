@@ -18,15 +18,21 @@ export class EditNoteComponent implements OnInit {
   NotesHeading: string = "Edit Note";
   userFirstName: any;
   userLastName: any;
-  // isvisible: boolean = true;
-  // showBtn:boolean = true;
+  showCloseBtn:string = "none";
+  showSideMenu:string = "block";
+  showCloseBtnDiv:string = "none";
+  showMenu:boolean = false;
+  showSideMennu: boolean = true;
 
   constructor(private noteData:NoteService, private fb: FormBuilder, private route:ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
     this.note_id = this.route.snapshot.params['id'];
     this.initEditNoteForm();
-    this.EditNoteById(this.note_id)
+    this.EditNoteById(this.note_id);
+    this.showCloseBtn = "block";
+    this.showSideMenu = "block";
+    this.showCloseBtnDiv = "block";
     
   }
 
@@ -34,6 +40,11 @@ export class EditNoteComponent implements OnInit {
   //   this. isvisible = true;
 
   // }
+
+  dropdown(){
+    this.showSideMennu = !this.showSideMennu;
+  }
+  
   initEditNoteForm(){
     this.editNote = this.fb.group({
       title: ['', Validators.required],

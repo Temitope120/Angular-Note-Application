@@ -18,6 +18,11 @@ export class ViewNoteComponent implements OnInit {
   userFirstName:any;
   userLastName:any;
   disabled:boolean = true;
+  showCloseBtn:string = "none";
+  showSideMenu:string = "block";
+  showCloseBtnDiv:string = "none";
+  showMenu:boolean = false;
+  showSideMennu: boolean = true;
 
   constructor(private noteData:NoteService, private route:ActivatedRoute, private fb: FormBuilder, private router:Router) { }
 
@@ -25,8 +30,15 @@ export class ViewNoteComponent implements OnInit {
     this.noteId = this.route.snapshot.params['id'];
     this.initViewNote();
     this.viewNoteById(this.noteId);
+    this.showCloseBtn = "block";
+    this.showSideMenu = "block";
+    this.showCloseBtnDiv = "block";
+    // this.showSideMennu = false;
   }
 
+  dropdown(){
+    this.showSideMennu = !this.showSideMennu;
+  }
   initViewNote(){
     this.viewNote = this.fb.group({
       title: ["", Validators.required],

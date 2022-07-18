@@ -6,9 +6,15 @@
         </p>
         <p class="text-center text-dark fw-bold p-3">{{NotesHeading}}</p>
 
-        <div>
-            <button class="btn btn-sm add-btn me-3 text-white fw-bold" routerLink="/main/new"> +</button>
-            <button class="btn btn-sm me-3 text-dark fw-bold btn-white px-3" (click)="logout()"> Log Out</button>
+        <div *ngIf="showCloseBtnDiv" [ngClass] = "{showCloseBtn: showCloseBtn}">
+            <img src="../../../assets/images/close-me.webp" alt="" class="close-btn" [ngClass]="{showCloseBtnDiv: showCloseBtnDiv}" (click) = "dropdown()" >
+        </div>
+
+        <div *ngIf="showSideMennu">
+            <div *ngIf = "showSideMenu" [ngClass] = "{showSideMenu: showSideMenu}">
+                <button class="btn btn-sm add-btn me-3 text-white fw-bold" routerLink="/main/new"> +</button>
+                <button class="btn btn-sm me-3 text-dark fw-bold btn-white px-3" (click)="logout()"> Log Out</button>
+            </div>
         </div>
     </div>
 

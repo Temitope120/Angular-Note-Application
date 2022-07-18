@@ -33,7 +33,6 @@ body{
 }
 ::placeholder{
     color:black;
-    /* padding-left: 5px; */
     font-weight: 400;
 }
 .searchbar-container input{
@@ -63,10 +62,29 @@ app-note-card{
     width: 85vw;
     margin: 30px auto;
 }
+.close-btn{
+    visibility: hidden;
+}
+.showSideMenu{
+    display: block;
+}
+
+
 @media screen and (max-width: 1024px) {
     .notes-list{
         width: 90vw;
         justify-content: space-evenly;
+    }
+    .showSideMenu{
+        display: block;
+    }
+    
+}
+
+
+@media screen and (max-width:768px) {
+    .showSideMenu{
+        display: block;
     }
     
 }
@@ -82,5 +100,39 @@ app-note-card{
     .top-bar p {
         font-size: 13px;
     }
+    .top-bar{
+        justify-content: space-evenly;
+    }
+    .top-bar p {
+        font-size: 13px;
+    }
+    .showCloseBtn{
+        display: block;
+    }
+    .showSideMenu{
+        display: block;
+        position: absolute;
+        right:0px;
+        top: 35px;
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 0 .125rem .25rem rgba(black, .075);
+    } 
+    .showCloseBtnDiv{
+        display: block;
+    }
+    .close-btn{
+        visibility: visible;
+        position: absolute;
+        width: 15px;
+        height: 20px;
+        bottom: 5px;
+        top: 5px;
+    }
+    .name, .top-bar p{
+        font-size: 10px;
+    }
     
 }
+

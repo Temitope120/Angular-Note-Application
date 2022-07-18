@@ -42,3 +42,8 @@
     outline: none;
     border-radius: 10px;
 }
+@media screen and (max-width: 1024px) {
+    #content{
+        width:100%;
+    }
+}

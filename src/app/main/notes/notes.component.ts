@@ -25,12 +25,22 @@ export class NotesComponent implements OnInit {
   responseTotal: any;
   totalItems: any;
 
+  showCloseBtn: string = "none";
+  showSideMenu: string = "block";
+  showCloseBtnDiv: string = "none";
+  showMenu: boolean = false;
+  showSideMennu: boolean = true;
+  searchInput:any;
+
   constructor(private noteData: NoteService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     // retrieve all notes from note service
     // this.noteId = this.route.snapshot.params['id'];
-    this.getNotes(this.page, this.noteSize)
+    this.getNotes(this.page, this.noteSize);
+    this.showCloseBtn = "block";
+    this.showSideMenu = "block";
+    this.showCloseBtnDiv = "block";
     // this.getNoteById(this.noteId)
 
   }
@@ -62,27 +72,31 @@ export class NotesComponent implements OnInit {
 
   }
 
+  dropdown() {
+    this.showSideMennu = !this.showSideMennu;
+  }
+
   getPage(p: number) {
     // const url = `https://api.instantwebtools.net/v1/passenger?page=${page}&size=${this.itemsPerPage}`;
     this.getNotes(p, this.noteSize)
-      // this.noteData.getAll().subscribe((res) => {
-      //   this.responsePerPage = res.per_page;
-      //   this.totalItems = res.total;
+    // this.noteData.getAll().subscribe((res) => {
+    //   this.responsePerPage = res.per_page;
+    //   this.totalItems = res.total;
 
-      //   console.log('Notes Per Page', this.responsePerPage)
-      //   console.log('Total Notes', this.totalItems)
-      //   this.allNotes = res.data;
-      // })
+    //   console.log('Notes Per Page', this.responsePerPage)
+    //   console.log('Total Notes', this.totalItems)
+    //   this.allNotes = res.data;
+    // })
   }
 
   getNoteById(noteId: number) {
-        this.noteData.getNote(noteId).subscribe((res) => {
-          console.log(res)
-          this.router.navigateByUrl(`/main/view/${noteId}`);
-          return this.notes[noteId];
-        })
+    this.noteData.getNote(noteId).subscribe((res) => {
+      console.log(res)
+      this.router.navigateByUrl(`/main/view/${noteId}`);
+      return this.notes[noteId];
+    })
 
-      }
+  }
 
   deleteNote(event: any) {
     console.log(event)
@@ -97,10 +111,16 @@ export class NotesComponent implements OnInit {
   }
 
   logout() {
-        localStorage.clear();
-        sessionStorage.clear();
-        this.router.navigate(['/auth/']);
-      }
+    localStorage.clear();
+    sessionStorage.clear();
+    this.router.navigate(['/auth/']);
+  }
+
+  search(event:any){
+    event.target.value = this.searchInput;
+    console.log(this.searchInput);
+    // console.log('Search Value',this.searchInput)
+  }
 
 }
 

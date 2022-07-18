@@ -4,18 +4,25 @@
             <span class="name">{{userFirstName}}&nbsp;{{userLastName}}
             </span>
         </p>
-        <p class="text-center text-dark fw-bold p-3">{{NotesHeading}}</p>
+        <p class="text-center text-dark fw-bold p-3 noteHeading">{{NotesHeading}}</p>
 
-        <div>
-            <button class="btn btn-sm add-btn me-3 text-white fw-bold" routerLink="/main/new"> +</button>
-            <button class="btn btn-sm me-3 text-dark fw-bold btn-white px-3" (click)="logout()"> Log Out</button>
+
+        <div *ngIf="showCloseBtnDiv" [ngClass] = "{showCloseBtn: showCloseBtn}">
+            <img src="../../../assets/images/close-me.webp" alt="" class="close-btn" [ngClass]="{showCloseBtnDiv: showCloseBtnDiv}" (click) = "dropdown()" >
+        </div>
+
+        <div *ngIf="showSideMennu">
+            <div *ngIf = "showSideMenu" [ngClass] = "{showSideMenu: showSideMenu}">
+                <button class="btn btn-sm add-btn me-3 text-white fw-bold" routerLink="/main/new"> +</button>
+                <button class="btn btn-sm me-3 text-dark fw-bold btn-white px-3" (click)="logout()"> Log Out</button>
+            </div>
         </div>
 
     </div>
 
     <div class="layout">
         <form class="searchbar-container mt-3 mb-3 shadow-lg">
-            <input type="text" placeholder="Search Note" class="ps-4">
+            <input type="text" #searchNote placeholder="Search Note" class="ps-4" [value] = "this.searchInput" (input)="search(searchNote)">
             <i class="fa fa-search"></i>
         </form>
         <!-- <div>
