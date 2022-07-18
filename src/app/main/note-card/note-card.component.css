@@ -105,7 +105,7 @@
     border-radius: 8px;
 }
 .date{
-    color: rgb(45, 44, 44);
+    color: #4a4848;
     font-weight: 500;
     text-align: right;
     font-style: italic;
@@ -144,8 +144,18 @@
     }
     .date{
         font-size: 12px;
+        color: #4a4848;
     }
     
+}
+@media screen and (min-width: 430px) and (max-width: 600px) {
+    .note-card-container{
+        width: 50vw;
+        height: 210px;
+    }
+    .notes-list{
+        width: 100vw;
+    }
 }
 @media screen and (max-width: 430px) {
     .note-card-container{

@@ -92,6 +92,24 @@ app-note-card{
     }
     
 }
+@media screen and (min-width: 430px) and (max-width: 600px) {
+    .notes-list{
+        width: 100vw;
+    }
+    .menu{
+        display: none;
+    }
+    .mobile-menu{
+        display: flex;
+        justify-content: center;
+    }
+    .top-bar p{
+        font-size: 16px;
+    }
+    .searchbar-container{
+        width: 80%;
+    }
+}
 
 @media screen and (max-width: 430px) {
     .menu{
