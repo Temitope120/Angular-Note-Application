@@ -108,7 +108,7 @@ li{
     margin: 0 auto;
     border-radius: 20px;
     padding: 18px 25px;
-    height: 100vh;
+    /* height: 100vh; */
     color: #000;   
 }
 .green-btn{

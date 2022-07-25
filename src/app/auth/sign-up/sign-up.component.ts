@@ -10,28 +10,30 @@ import { Signup } from 'src/app/Models/signup';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  newUser:any
+  newUser: any
   signUpForm!: FormGroup;
-  passwordType!:boolean;
+  passwordType!: boolean;
   showText!: boolean;
 
   constructor(private authdata: AuthServiceService, private fb: FormBuilder, private router: Router) { }
-  
+  errorMessage: any;
   ngOnInit(): void {
+    this.initsignUpForm();
   }
 
   initsignUpForm() {
     this.signUpForm = this.fb.group({
       email: ['', Validators.required],
+      first_name: ['', Validators.required],
+      last_name: ['', Validators.required],
       password: ['', Validators.required]
     })
   }
 
   createNewUser() {
     const payload = this.signUpForm.value;
-    // console.log(payload)
     sessionStorage.setItem('newUserDetails', JSON.stringify(this.signUpForm.value))
-    // this.loginUser(payload)
+    this.SignUp(payload)
   }
 
   showPassword() {
@@ -39,4 +41,14 @@ export class SignUpComponent implements OnInit {
     this.showText = !this.showText;
   }
 
+  SignUp(payload: Signup){
+    this.authdata.signUp(payload).subscribe((res) => {
+      console.log('Sign up Response', res)
+      this.router.navigate([`/auth/`]).then();
+    }, (error: any) =>{
+      this.errorMessage = error
+      console.log(error)
+      console.log("An Error Occured, can't SignUp")
+    })
+  }
 }

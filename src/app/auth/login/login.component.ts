@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.initLoginForm();
-    this.displayCommonQuestions();
+    // this.displayCommonQuestions();
   }
   initLoginForm() {
     this.loginForm = this.fb.group({
